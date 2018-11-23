@@ -1,43 +1,46 @@
 package modulo1tiquetera;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Scanner;
 
 public class Modulo1Tiquetera {
-
-    String Tik[] = new String[100];
+    
     public static void main(String[] args) {
-        File archivo = new File("curso.txt");
-        int i = 0;
+        Prioridad Px = new Prioridad();
+       
         
-        try{
-            FileWriter escritor = new FileWriter(archivo);
-            BufferedWriter buffer = new BufferedWriter(escritor);
-            PrintWriter impresor = new PrintWriter(buffer);
-            
-            for(i=1; i<=100; i++){
-                impresor.write("Número " + i);
-                impresor.println();
-            }
-            
-            impresor.close();
-            buffer.close();
-        } catch(IOException e) {
-                            
-    }
+        
+       //Codigo para guardar el archivo mas adelante
+       
+       
         Scanner teclado = new Scanner(System.in);
         int opcion = 1;
-        while (opcion !=0 ) {
+        while (opcion != 0) {
             System.out.println("1. Preferencial");
             System.out.println("2. Normal");
             System.out.println("3. Varios Tramites");           
             System.out.println("0. Salir");
             System.out.print("Seleccione una opcion: ");
             opcion = teclado.nextInt();
+            
+            switch (opcion){
+                case 1:     
+                Px.Prioridades();
+                break;
+                
+                case 2:
+                Px.Normal();
+                break;
+                
+                case 3:
+                Px.Multi();
+                break;
+                
+                case 4:
+                Px.mostrar();
+                break;
+            }
+            
         }
     }
     
