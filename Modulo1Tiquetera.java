@@ -15,10 +15,12 @@ public class Modulo1Tiquetera {
        
         Scanner teclado = new Scanner(System.in);
         int opcion = 1;
+        Px.prueba();
         while (opcion != 0) {
             System.out.println("1. Preferencial");
             System.out.println("2. Normal");
-            System.out.println("3. Varios Tramites");           
+            System.out.println("3. Varios Tramites"); 
+            System.out.println("4. Mostrar los cambios");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opcion: ");
             opcion = teclado.nextInt();
@@ -39,6 +41,7 @@ public class Modulo1Tiquetera {
                 case 4:
                 Px.mostrar();
                 break;
+                              
             }
             
         }
