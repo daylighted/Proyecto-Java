@@ -12,6 +12,7 @@ public class Prioridad {
     public void prueba(){
         for(int i =0; i<100; i++){
             Tik[i] = "";
+            
         }
     }
     
@@ -21,6 +22,7 @@ public class Prioridad {
         for(int i=0;i<100;i++){  
             if(Tik[i].equals("")){
             Tik[i] = "P" + K++;
+            guardar();
             i = 100;
             }
         }
@@ -29,8 +31,9 @@ public class Prioridad {
     public void Normal(){
         for(int i=0; i<100; i=i+3){
             if(Tik[i].equals("")){
-            Tik[i] = "N" + K2++;            
-            i = 100;
+            Tik[i] = "N" + K2++;  
+            guardar();
+            i = 100;          
             }
         }
      
@@ -41,7 +44,8 @@ public class Prioridad {
             
            if(Tik[i].equals("")){
             Tik[i] = "M" + K3++;
-            i = 100;
+            guardar();
+            i = 100; 
            } 
             
         }
@@ -50,6 +54,9 @@ public class Prioridad {
         for(int i=0; i<100; i++){
             System.out.println(Tik[i]);
         }
+        
+    }
+    public void guardar(){
         File archivo = new File("C:/Ticket.txt");
                      
         try{
@@ -58,7 +65,7 @@ public class Prioridad {
             PrintWriter impresor = new PrintWriter(buffer);
             
             for(int i=0; i<100; i++){
-                impresor.write("Ticket " + Tik[i]);
+                impresor.write(Tik[i]);
                 impresor.println();
                 //i = 100;
             }
