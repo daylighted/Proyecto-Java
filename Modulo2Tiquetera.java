@@ -1,21 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modulo2tiquetera;
+import java.util.Scanner;
 
-/**
- *
- * @author eduar
- */
 public class Modulo2Tiquetera {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public static CLS_Caja Px = new CLS_Caja();
     
+    public static void main(String[] args) {
+         Px.prueba();
+         Px.Load();         
+         Menu();
+}
+    
+    public static void Menu(){
+        String Res;
+        Scanner teclado = new Scanner(System.in);
+        
+        
+         int opcion = 1;
+        
+        while (opcion != 0) {
+            System.out.println("1. Caja");
+            System.out.println("2. Mostrar los cambios");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione una opcion: ");
+            opcion = teclado.nextInt();
+            
+            switch (opcion){
+                case 1:     
+                Px.Caja();
+                break;
+                
+                case 2:
+                Px.mostrar();              
+                break;
+                              
+            }
+            
+        }
+        
+        
+        
+    }
 }
