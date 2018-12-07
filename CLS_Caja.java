@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CLS_Caja {
     public static String Tik[] = new String[101];
     public static String Temp[] = new String[101];
-    
+    public static int x=0;
     public void prueba(){
         for(int i =0; i<100; i++){
             Tik[i] = "";
@@ -38,11 +38,12 @@ public class CLS_Caja {
       
     }
      public void Caja(){
+         String text = "";
          for(int i=0;i<=100;i++){ 
-             if(Temp[i].equals("")){
-                    System.out.println(Tik[i]);
-                    Temp[i] = Tik[i];                  
+             if(Temp[i].equals("") && Tik[i] != ("")){                   
+                    Temp[i] = Tik[x];                         
                     guardar();
+                    System.out.println((text.replace("\\s","")) + Temp[i]);
                     ordenar();
                     i=100;
              }    
@@ -82,10 +83,7 @@ public class CLS_Caja {
              Tik[i] = Tik[i+1];
          }
          Tik[99] = "";
-         /*for(int i=0; i<98; i++){
-             Temp[i] = Temp[i+1];
-         }
-         Temp[0] = "";*/
+        
      }
     
      }
