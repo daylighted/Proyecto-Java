@@ -43,7 +43,7 @@ public class CLS_Caja {
              if(Temp[i].equals("") && Tik[i] != ("")){                   
                     Temp[i] = Tik[x];                         
                     guardar();
-                    System.out.println((text.replace("\\s","")) + Temp[i]);
+                    System.out.println(Temp[i]);
                     ordenar();
                     i=100;
              }    
