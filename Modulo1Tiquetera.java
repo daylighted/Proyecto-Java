@@ -10,8 +10,7 @@ public class Modulo1Tiquetera {
        
         
         
-       //Codigo para guardar el archivo mas adelante
-       
+       //Menu para repartir los tickets, hace llamado a procesos en otra clase      
        
         Scanner teclado = new Scanner(System.in);
         int opcion = 1;
